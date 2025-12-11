@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PremiumTube — Modern Premium UI</title>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>c:\Users\vishnupriya\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Visual Studio Code\Visual Studio Code.lnk
+  
+  <header class="topbar" role="banner">
+    <div class="topbar-left">
+      <button id="btn-toggle-sidebar" class="icon-btn" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="brand">
+        <svg viewBox="0 0 24 24" class="brand-icon" aria-hidden="true">
+          <path fill="currentColor" d="M3 6.5A3.5 3.5 0 0 1 6.5 3h11A3.5 3.5 0 0 1 21 6.5v11A3.5 3.5 0 0 1 17.5 21h-11A3.5 3.5 0 0 1 3 17.5v-11Z"></path>
+          <path fill="white" d="M10 8.5v7l6-3.5-6-3.5z"></path>
+        </svg>
+        <span class="brand-text">Youtube</span>
+      </div>
+    </div>
+
+    <div class="topbar-center">
+      <form id="search-form" class="search" role="search" aria-label="Search videos">
+        <input id="search-input" type="search" placeholder="Search videos, channels, topics..." autocomplete="off" />
+        <button type="submit" class="search-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button type="button" id="voice-btn" class="icon-btn" aria-label="Voice search"><i class="fa-solid fa-microphone"></i></button>
+        <div id="suggestions" class="suggestions" aria-hidden="true"></div>
+      </form>
+    </div>
+
+    <div class="topbar-right">
+      <button id="create-btn" class="secondary-btn"><i class="fa-solid fa-plus"></i><span>Create</span></button>
+      <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+      <div class="avatar" title="Account">
+        <img src="https://via.placeholder.com/40" alt="Profile avatar">
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="layout">
+    
+    <aside id="sidebar" class="sidebar" aria-label="Main menu">
+      <nav>
+        <a class="nav-link active"><i class="fa-solid fa-house"></i><span>Home</span></a>
+        <a class="nav-link"><i class="fa-solid fa-fire"></i><span>Trending</span></a>
+        <a class="nav-link"><i class="fa-solid fa-square-play"></i><span>Shorts</span></a>
+        <a class="nav-link"><i class="fa-solid fa-layer-group"></i><span>Subscriptions</span></a>
+        <hr />
+        <a class="nav-link"><i class="fa-solid fa-folder"></i><span>Library</span></a>
+        <a class="nav-link"><i class="fa-solid fa-clock-rotate-left"></i><span>History</span></a>
+        <a class="nav-link"><i class="fa-solid fa-thumbs-up"></i><span>Liked</span></a>
+      </nav>
+      <div class="sidebar-footer">Made with ❤ • PremiumTube</div>
+    </aside>
+
+    
+    <main class="content" id="main" role="main">
+      <section class="hero">
+        <h1>For you</h1>
+        <p class="muted">Handpicked videos and latest trends</p>
+      </section>
+
+      <section class="grid" id="videoGrid" aria-live="polite">
+        
+        
+        <article class="card" tabindex="0" role="button" data-title="Advanced CSS Animations" data-channel="DesignLab" data-views="1.2M" data-age="2 days" data-thumb="https://picsum.photos/seed/1/640/360" data-desc="A deep dive into performant CSS animations.">
+          <div class="thumb-wrap">
+            <img class="thumb" src="https://picsum.photos/seed/1/640/360" alt="Advanced CSS Animations thumbnail">
+            <div class="duration">12:34</div>
+          </div>
+          <div class="meta">
+            <img class="ch" src="https://i.pravatar.cc/40?img=10" alt="">
+            <div class="meta-text">
+              <h3 class="title">Advanced CSS Animations</h3>
+              <p class="sub">DesignLab • 1.2M views • 2 days ago</p>
+            </div>
+            <button class="more icon-btn" aria-label="More options"><i class="fa-solid fa-ellipsis"></i></button>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0" role="button" data-title="Mastering CSS Grid" data-channel="CodeCraft" data-views="900K" data-age="1 week" data-thumb="https://picsum.photos/seed/2/640/360" data-desc="Grid layout patterns for real-world UIs.">
+          <div class="thumb-wrap">
+            <img class="thumb" src="https://picsum.photos/seed/2/640/360" alt="Mastering CSS Grid thumbnail">
+            <div class="duration">18:02</div>
+          </div>
+          <div class="meta">
+            <img class="ch" src="https://i.pravatar.cc/40?img=20" alt="">
+            <div class="meta-text">
+              <h3 class="title">Mastering CSS Grid</h3>
+              <p class="sub">CodeCraft • 900K views • 1 week ago</p>
+            </div>
+            <button class="more icon-btn" aria-label="More options"><i class="fa-solid fa-ellipsis"></i></button>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0" role="button" data-title="UX Case Study: Top Apps" data-channel="UXStudio" data-views="420K" data-age="3 weeks" data-thumb="https://picsum.photos/seed/3/640/360" data-desc="UX patterns from top apps explained.">
+          <div class="thumb-wrap">
+            <img class="thumb" src="https://picsum.photos/seed/3/640/360" alt="UX Case Study thumbnail">
+            <div class="duration">9:05</div>
+          </div>
+          <div class="meta">
+            <img class="ch" src="https://i.pravatar.cc/40?img=30" alt="">
+            <div class="meta-text">
+              <h3 class="title">UX Case Study: Top Apps</h3>
+              <p class="sub">UXStudio • 420K views • 3 weeks ago</p>
+            </div>
+            <button class="more icon-btn" aria-label="More options"><i class="fa-solid fa-ellipsis"></i></button>
+          </div>
+        </article>
+
+        
+      </section>
+    </main>
+  </div>
+
+  
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-panel" role="document">
+      <button id="modal-close" class="modal-close" aria-label="Close preview"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-body">
+        <div class="modal-thumb"><img id="modal-thumb" src="" alt=""></div>
+        <div class="modal-info">
+          <h2 id="modal-title"></h2>
+          <p id="modal-sub" class="muted"></p>
+          <p id="modal-desc"></p>
+          <div class="modal-actions">
+            <button class="primary-btn"><i class="fa-solid fa-play"></i> Play</button>
+            <button class="secondary-btn"><i class="fa-solid fa-share"></i> Share</button>
+            <button class="secondary-btn"><i class="fa-solid fa-download"></i> Download</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
